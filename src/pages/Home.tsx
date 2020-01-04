@@ -23,7 +23,7 @@ const Home: React.FC = () => {
              
 
             <IonButton>
-              Right Icon
+              <a>Enter</a>
               <IonIcon slot="end" name="star" />
             </IonButton>
 
