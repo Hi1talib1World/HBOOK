@@ -3,6 +3,7 @@ import { IonContent, IonHeader, IonPage,IonToolbar,IonTitle,
   IonBackButton,
   IonButton,
   IonIcon,
+
   IonMenuButton,
   IonSearchbar,
   IonSegment,
@@ -31,8 +32,8 @@ const Home: React.FC = () => {
        
         
       </IonContent>
-
-      
+            
+            
       
       <IonTabBar slot="bottom">
         <IonTabButton tab="schedule">
