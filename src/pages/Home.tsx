@@ -1,58 +1,39 @@
-import { IonContent, IonHeader, IonPage,IonToolbar,IonTitle,
-  IonButtons,
-  IonBackButton,
-  IonButton,
-  IonIcon,
-
-  IonMenuButton,
-  IonSearchbar,
-  IonSegment,
-  IonFooter, IonTabBar, IonTabButton, IonLabel, IonBadge } from '@ionic/react';
-import React from 'react';
+import { IonContent, IonHeader, IonPage,IonPopover, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonFabList } from '@ionic/react';
+import React , { useState } from 'react';
 
 const Home: React.FC = () => {
+  const [showPopover, setShowPopover] = useState(false); 
   return (
-   
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Ionic Blank</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
-            
-             
+      <IonContent className="ion-padding">
+        The world is your oyster.
+        <p>
+          If you get lost, the{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/">
+            docs
+          </a>{' '}
+          will be your guide.
+        </p>
+          <IonPopover
+          isOpen={showPopover}
+          onDidDismiss={e => setShowPopover(false)}
+        >
+          <p>This is popover content</p>
+        </IonPopover>
 
-            <IonButton>
-              <a>Enter</a>
-              <IonIcon slot="end" name="star" />
-            </IonButton>
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
+      <IonFabButton onClick={() => setShowPopover(true)}>
+        <IonIcon name="arrow-dropleft" />
+      </IonFabButton>
+    </IonFab>
 
-      
-       
-        
       </IonContent>
-            
-            
-      
-      <IonTabBar slot="bottom">
-        <IonTabButton tab="schedule">
-          <IonIcon name="calendar" />
-          <IonLabel>Schedule</IonLabel>
-          <IonBadge>6</IonBadge>
-        </IonTabButton>
-
-        <IonTabButton tab="speakers">
-          <IonIcon name="contacts" />
-          <IonLabel>Speakers</IonLabel>
-        </IonTabButton>
-
-        <IonTabButton tab="about">
-          <IonIcon name="information-circle" />
-          <IonLabel>About</IonLabel>
-        </IonTabButton>
-      </IonTabBar>
-    
+     
     </IonPage>
   );
 };
