@@ -1,5 +1,7 @@
 {
   "name": "HBOOK",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
