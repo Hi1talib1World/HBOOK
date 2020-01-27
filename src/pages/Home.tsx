@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage,IonPopover, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonFabList } from '@ionic/react';
+import { IonSegment, IonSegmentButton, IonLabel,IonContent, IonHeader, IonTabs, IonTabBar, IonTabButton, IonBadge , IonPage,IonPopover, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonFabList } from '@ionic/react';
 import React , { useState } from 'react';
 
 const Home: React.FC = () => {
@@ -11,14 +11,8 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        The world is your oyster.
-        <p>
-          If you get lost, the{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/">
-            docs
-          </a>{' '}
-          will be your guide.
-        </p>
+        
+        
           <IonPopover
           isOpen={showPopover}
           onDidDismiss={e => setShowPopover(false)}
@@ -32,6 +26,8 @@ const Home: React.FC = () => {
       </IonFabButton>
     </IonFab>
 
+
+    
       </IonContent>
      
     </IonPage>

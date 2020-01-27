@@ -12,7 +12,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.0",
-    "ionic2-super-tabs": "^5.2.0",
+    "ionic2-super-tabs": "^4.1.4",
     "ionicons": "^4.6.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
