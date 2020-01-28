@@ -24,14 +24,13 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/home" component={Home} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <Router>
+    <div className="App">
+      <IonApp>
+      <Route path="/" component={TabRoot} />
+      </IonApp>
+    </div>
+  </Router>
 );
 
 export default App;
