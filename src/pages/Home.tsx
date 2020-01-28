@@ -29,7 +29,6 @@ const Home: React.FC = () => {
       <IonTabButton tab="schedule">
         <IonIcon name="calendar" />
         <IonLabel>Schedule</IonLabel>
-        <IonBadge>6</IonBadge>
       </IonTabButton>
 
       <IonTabButton tab="speakers">
