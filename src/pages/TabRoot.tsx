@@ -11,7 +11,6 @@ import {
 import { Route, Redirect } from "react-router";
 import Tab1 from "./Tab1";
 import Tab2 from "./Tab2";
-import Tab1Detail from "./Tab1Detail";
 
 interface IAppProps {}
 
@@ -21,7 +20,6 @@ const TabRoot: React.FC<IAppProps> = props => {
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/:tab(tab1)" component={Tab1}  />
-          <Route path="/:tab(tab1-detail)" component={Tab1Detail} />
           <Route path="/:tab(tab2)" component={Tab2} />
           <Route path="/" render={() => <Redirect to="/tab1" />} /> 
         </IonRouterOutlet>
