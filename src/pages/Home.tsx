@@ -10,28 +10,15 @@ const Home: React.FC = () => {
       <IonContent className="ion-padding">
             
         
-          <IonPopover
-          isOpen={showPopover}
-          onDidDismiss={e => setShowPopover(false)}
-        >
-          <p>This is popover content</p>
-        </IonPopover>
-
-        <IonFab vertical="bottom" horizontal="end" slot="fixed">
-      <IonFabButton onClick={() => setShowPopover(true)}>
-        <IonIcon name="arrow-dropleft" />
-      </IonFabButton>
-    </IonFab>
-
 
     <IonTabs>
     <IonTabBar slot="bottom">
-      <IonTabButton tab="schedule">
+      <IonTabButton tab="schedule" href="/tab1">
         <IonIcon name="calendar" />
         <IonLabel>Schedule</IonLabel>
       </IonTabButton>
 
-      <IonTabButton tab="speakers">
+      <IonTabButton tab="speakers" href="/tab2">
         <IonIcon name="contacts" />
         <IonLabel>Speakers</IonLabel>
       </IonTabButton>
