@@ -1,14 +1,17 @@
-import React from "react";
 import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent,
+  IonContent,IonSegment,IonMenu,IonPopover,IonItem,IonList,IonRouterOutlet, IonSegmentButton, IonLabel, IonFab, IonFabButton, IonIcon, IonFabList,
   IonButton
 } from "@ionic/react";
 import { withRouter } from "react-router";
+import React , { useState } from 'react';
+
 
 const Tab1: React.SFC<any> = (props) => {
+  const [showPopover, setShowPopover] = useState(false); 
+
   return (
     <>
       <IonHeader>
@@ -18,6 +21,19 @@ const Tab1: React.SFC<any> = (props) => {
       </IonHeader>
       <IonContent>
         
+        
+      <IonPopover
+          isOpen={showPopover}
+          onDidDismiss={e => setShowPopover(false)}
+        >
+          <p>This is popover content</p>
+        </IonPopover>
+
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
+      <IonFabButton onClick={() => setShowPopover(true)}>
+        <IonIcon name="arrow-dropleft" />
+      </IonFabButton>
+    </IonFab>
       </IonContent>
     </>
   );
