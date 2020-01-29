@@ -9,6 +9,8 @@ const Tab2: React.SFC = () => {
           <IonTitle>Tab Two</IonTitle>
         </IonToolbar>
       </IonHeader>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+
       <IonContent />
     </>
   );
