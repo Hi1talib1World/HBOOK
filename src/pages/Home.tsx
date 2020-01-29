@@ -7,7 +7,7 @@ import Tab2 from "./Tab2";
 const Home: React.FC = () => {
   const [showPopover, setShowPopover] = useState(false); 
   return (
-    <IonPage>
+    <IonPage id="main">
 
     
       <IonContent className="ion-padding">
