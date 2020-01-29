@@ -7,9 +7,7 @@ const Tab2: React.FunctionComponent<RouteComponentProps> = ({ history }) => {
   return (
     <React.Fragment>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab Two</IonTitle>
-        </IonToolbar>
+        
       </IonHeader>
       <IonContent>
         <IonList>
