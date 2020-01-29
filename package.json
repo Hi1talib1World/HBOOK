@@ -19,6 +19,7 @@
     "react-router": "^5.1.0",
     "react-router-dom": "^5.1.0",
     "react-scripts": "3.2.0",
+    "react-tabs": "^3.1.0",
     "tabs": "^0.2.0",
     "typescript": "3.6.3"
   },
