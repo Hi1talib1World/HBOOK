@@ -19,19 +19,19 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import TabRoot from './pages/TabRoot';
 
 /* Theme variables */
 import './theme/variables.css';
 
 const App: React.FC = () => (
-  <Router>
-    <div className="App">
-      <IonApp>
-      <Route path="/" component={TabRoot} />
-      </IonApp>
-    </div>
-  </Router>
+  <IonApp>
+  <IonReactRouter>
+    <IonRouterOutlet>
+      <Route path="/home" component={Home} exact={true} />
+      <Route exact path="/" render={() => <Redirect to="/home" />} />
+    </IonRouterOutlet>
+  </IonReactRouter>
+</IonApp>
 );
 
 export default App;
