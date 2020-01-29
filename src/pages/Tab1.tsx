@@ -17,16 +17,7 @@ const Tab1: React.SFC<any> = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonButton
-          expand="full"
-          style={{ margin: "14" }}
-          onClick={e => {
-            e.preventDefault();
-            props.history.push("/tab1-detail");
-          }}
-        >
-          NEXT PAGE
-        </IonButton>
+        
       </IonContent>
     </>
   );
