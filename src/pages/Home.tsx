@@ -15,6 +15,11 @@ const Home: React.FC = () => {
         
 
     <IonTabs>
+    <IonRouterOutlet>
+          <Route path="/:tab(tab1)" component={Tab1}  />
+          <Route path="/:tab(tab2)" component={Tab2} />
+          <Route path="/" render={() => <Redirect to="/tab1" />} /> 
+        </IonRouterOutlet>
     <IonTabBar slot="bottom">
       <IonTabButton tab="schedule" href="/tab1">
         <IonIcon name="calendar" />
@@ -36,13 +41,7 @@ const Home: React.FC = () => {
         <IonLabel>About</IonLabel>
       </IonTabButton>
     </IonTabBar>
-    <IonRouterOutlet>
-    <IonRouterOutlet>
-          <Route path="/:tab(tab1)" component={Tab1}  />
-          <Route path="/:tab(tab2)" component={Tab2} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} /> 
-        </IonRouterOutlet>
-    </IonRouterOutlet>
+    
 
   </IonTabs>
 
