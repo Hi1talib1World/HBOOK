@@ -2,7 +2,7 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent,IonSegment,IonMenu,IonPopover,IonItem,IonList,IonRouterOutlet, IonSegmentButton, IonLabel, IonFab, IonFabButton, IonIcon, IonFabList,
+  IonContent,IonSegment,IonMenu,IonPopover, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle,IonItem,IonList,IonRouterOutlet, IonSegmentButton, IonLabel, IonFab, IonFabButton, IonIcon, IonFabList,
   IonButton
 } from "@ionic/react";
 import { withRouter } from "react-router";
