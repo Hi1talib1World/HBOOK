@@ -22,9 +22,7 @@ const Tab1: React.FunctionComponent = () => {
   return (
     <React.Fragment>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab One</IonTitle>
-        </IonToolbar>
+        
       </IonHeader>
       <IonContent>
         <IonCard class="welcome-card">
