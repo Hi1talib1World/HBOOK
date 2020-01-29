@@ -1,25 +1,30 @@
 import {
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonContent,
   IonHeader,
-  IonToolbar,
-  IonTitle,
- 
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
   IonListHeader,
-  
-  IonContent,IonSegment,IonMenu,IonPopover, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle,IonItem,IonList,IonRouterOutlet, IonSegmentButton, IonLabel, IonFab, IonFabButton, IonIcon, IonFabList,
-  IonButton
-} from "@ionic/react";
-import { withRouter } from "react-router";
-import React , { useState } from 'react';
+  IonTitle,
+  IonToolbar
+  } from '@ionic/react';
+import { book, build, colorFill, grid } from 'ionicons/icons';
+import React from 'react';
+import './Tab1.css';
 
-
-const Tab1: React.SFC<any> = (props) => {
-  const [showPopover, setShowPopover] = useState(false); 
-
+const Tab1: React.FunctionComponent = () => {
   return (
-    <>
-      <React.Fragment>
+    <React.Fragment>
       <IonHeader>
-        
+        <IonToolbar>
+          <IonTitle>Tab One</IonTitle>
+        </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonCard class="welcome-card">
@@ -41,26 +46,25 @@ const Tab1: React.SFC<any> = (props) => {
             <IonLabel>Resources</IonLabel>
           </IonListHeader>
           <IonItem href="https://ionicframework.com/docs/" target="_blank">
-            <IonIcon slot="start" color="medium"  />
+            <IonIcon slot="start" color="medium" icon={book} />
             <IonLabel>Ionic Documentation</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/building/scaffolding" target="_blank">
-            <IonIcon slot="start" color="medium"  />
+            <IonIcon slot="start" color="medium" icon={build} />
             <IonLabel>Scaffold Out Your App</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/layout/structure" target="_blank">
-            <IonIcon slot="start" color="medium"  />
+            <IonIcon slot="start" color="medium" icon={grid} />
             <IonLabel>Change Your App Layout</IonLabel>
           </IonItem>
           <IonItem href="https://ionicframework.com/docs/theming/basics" target="_blank">
-            <IonIcon slot="start" color="medium"  />
+            <IonIcon slot="start" color="medium" icon={colorFill} />
             <IonLabel>Theme Your App</IonLabel>
           </IonItem>
         </IonList>
       </IonContent>
     </React.Fragment>
-    </>
   );
 };
 
-export default withRouter(Tab1);
+export default Tab1;
