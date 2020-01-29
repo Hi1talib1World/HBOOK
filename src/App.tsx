@@ -1,9 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router,Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonApp, IonRouterOutlet,
+  IonIcon,
+  IonLabel,
+  IonPage,
+
+  IonTabBar,
+  IonTabButton,
+  IonTabs } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-
+import { apps, flash, send } from 'ionicons/icons';
+import Tab1 from './pages/Tab1';
+import Tab2 from './pages/Tab2';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -25,13 +34,32 @@ import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
-  <IonReactRouter>
-    <IonRouterOutlet>
-      <Route path="/home" component={Home} exact={true} />
-      <Route exact path="/" render={() => <Redirect to="/home" />} />
-    </IonRouterOutlet>
-  </IonReactRouter>
-</IonApp>
+    <IonReactRouter>
+      <IonPage id="main">
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route path="/:tab(tab1)" component={Tab1} exact={true} />
+            <Route path="/:tab(tab2)" component={Tab2} exact={true} />
+            <Route exact path="/" render={() => <Redirect to="/tab1" />} />
+          </IonRouterOutlet>
+          <IonTabBar slot="top">
+            <IonTabButton tab="tab1" href="/tab1">
+              <IonIcon icon={flash} />
+              <IonLabel>Tab One</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/tab2">
+              <IonIcon icon={apps} />
+              <IonLabel>Tab Two</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab3" href="/tab3">
+              <IonIcon icon={send} />
+              <IonLabel>Tab Three</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonPage>
+    </IonReactRouter>
+  </IonApp>
 );
 
 export default App;
