@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }  from "react";
 import {
   IonHeader,
   IonToolbar,
@@ -7,6 +7,7 @@ import {
   IonButtons,
   IonBackButton
 } from "@ionic/react";
+import { arrowRoundBack } from 'ionicons/icons'
 import { withRouter } from "react-router";
 
 const Tab1Detail: React.SFC<any> = (props) => {
@@ -14,13 +15,13 @@ const Tab1Detail: React.SFC<any> = (props) => {
     <>
       <IonHeader>
         <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton
-              text=""
-              defaultHref="tab1"
-              onClick={ ()=> props.history.replace("/tab1")}
-              goBack={() => {}}
-            />
+        <IonButtons slot="start">
+        <IonBackButton
+            text=""
+            defaultHref="/"
+            onClick={() => props.history.replace("/tab1")}
+            goBack={() => {}}
+        />
           </IonButtons>
           <IonTitle>Tab One Detail</IonTitle>
         </IonToolbar>
