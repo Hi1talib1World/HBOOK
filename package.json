@@ -5,8 +5,8 @@
   "dependencies": {
     "@ionic/react": "^4.8.0-rc.0",
     "@ionic/react-router": "4.8.0-rc.0",
-    "@types/react": "^16.9.1",
-    "@types/react-dom": "16.8.5",
+    "@types/react": "^16.14.8",
+    "@types/react-dom": "^16.8.5",
     "@types/react-router": "^5.1.15",
     "ionicons": "^4.6.2",
     "react": "16.9.0",
@@ -22,6 +22,7 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@ionic/app-scripts": "^3.2.4",
     "@types/react-router-dom": "^5.1.7",
     "react-scripts": "4.0.3",
     "react-scripts-ts": "latest"
