@@ -1,0 +1,179 @@
+.discover-container {
+  padding: 24px 16px 40px;
+}
+
+.discover-header {
+  margin-bottom: 24px;
+}
+
+.discover-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ion-color-dark);
+  margin: 0 0 8px;
+}
+
+.discover-subtitle {
+  font-size: 15px;
+  color: #475569;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.section-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.search-section {
+  margin-bottom: 24px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 0 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.search-icon {
+  color: #64748B;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.search-input {
+  --padding-start: 0;
+  font-size: 16px;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.continent-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.continent-chip {
+  background: white;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.continent-chip.active {
+  background: #6EE7B7;
+  border-color: #6EE7B7;
+  color: #064E3B;
+  font-weight: 600;
+}
+
+.slider-section {
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -10px; /* Adjusting for IonRange padding */
+}
+
+.slider-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1D4ED8;
+}
+
+.pop-range {
+  --bar-background: #CBD5E1;
+  --bar-background-active: #2563EB;
+  --knob-background: #1D4ED8;
+  --knob-size: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748B;
+  margin-top: -8px;
+}
+
+.toggle-section {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.toggle-text h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ion-color-dark);
+}
+
+.toggle-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748B;
+}
+
+.discover-hero-card {
+  position: relative;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.hero-tag {
+  align-self: flex-start;
+  background: #6EE7B7;
+  color: #064E3B;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
