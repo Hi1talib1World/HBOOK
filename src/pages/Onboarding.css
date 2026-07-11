@@ -1,0 +1,145 @@
+.onboarding-bg {
+  --background: #0f172a; /* Slate 900 */
+}
+
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 100%);
+}
+
+.ob-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ob-logo-icon {
+  font-size: 80px;
+  color: #3b82f6;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+}
+
+.ob-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing: -1px;
+}
+
+.ob-subtitle {
+  color: #94a3b8;
+  font-size: 16px;
+  margin: 0;
+}
+
+.ob-form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+.ob-section-title {
+  color: #e2e8f0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.ob-avatars-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.ob-avatar-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.ob-avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ob-avatar-circle.selected {
+  border-color: #3b82f6;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.ob-input-wrapper {
+  margin-bottom: 30px;
+}
+
+.ob-input-label {
+  display: block;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ob-input {
+  --background: rgba(0,0,0,0.2);
+  --color: #fff;
+  --placeholder-color: #64748b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.ob-input.has-focus {
+  border-color: #3b82f6;
+}
+
+.ob-start-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.ob-start-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 5px 10px -5px rgba(59, 130, 246, 0.4);
+}
+
+.ob-start-btn.disabled {
+  background: #334155;
+  color: #64748b;
+  box-shadow: none;
+  cursor: not-allowed;
+}
