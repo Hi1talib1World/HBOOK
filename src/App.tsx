@@ -11,11 +11,21 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, send } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-import Details from './pages/Details';
+import { compass, map, person, apps } from 'ionicons/icons';
+import Explore from './pages/Explore';
+import Games from './pages/Games';
+import CountryDetails from './pages/CountryDetails';
+import Profile from './pages/Profile';
+import Passport from './pages/Passport';
+import FlagQuiz from './pages/FlagQuiz';
+import CapitalQuiz from './pages/CapitalQuiz';
+import CurrencyQuiz from './pages/CurrencyQuiz';
+import Leaderboard from './pages/Leaderboard';
+import DailyMystery from './pages/DailyMystery';
+import Discover from './pages/Discover';
+import Badges from './pages/Badges';
+import Onboarding from './pages/Onboarding';
+import { UserProvider, useUser } from './context/UserContext';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,36 +43,72 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-const App: React.FunctionComponent = () => (
-  <IonApp>
+/* Global Theme */
+import './theme.css';
+
+const AppContent: React.FC = () => {
+  const { username } = useUser();
+
+  return (
     <IonReactRouter>
       <IonPage id="main">
-        <IonTabs>
+        {!username ? (
           <IonRouterOutlet>
-            <Route path="/:tab(tab1)" component={Tab1} exact={true} />
-            <Route path="/:tab(tab2)" component={Tab2} exact={true} />
-            <Route path="/:tab(tab2)/details" component={Details} />
-            <Route path="/:tab(tab3)" component={Tab3} />
-            <Route exact path="/" render={() => <Redirect to="/tab1" />} />
+            <Route path="/onboarding" component={Onboarding} exact={true} />
+            <Route render={() => <Redirect to="/onboarding" />} />
           </IonRouterOutlet>
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon icon={flash} />
-              <IonLabel>Tab One</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon icon={apps} />
-              <IonLabel>Tab Two</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
-              <IonIcon icon={send} />
-              <IonLabel>Tab Three</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+        ) : (
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route path="/explore" component={Explore} exact={true} />
+              <Route path="/games" component={Games} exact={true} />
+              <Route path="/profile" component={Profile} exact={true} />
+              <Route path="/passport" component={Passport} exact={true} />
+              <Route path="/quiz" component={FlagQuiz} exact={true} />
+              <Route path="/capital-quiz" component={CapitalQuiz} exact={true} />
+              <Route path="/currency-quiz" component={CurrencyQuiz} exact={true} />
+              
+              <Route path="/leaderboard" component={Leaderboard} exact={true} />
+              <Route path="/daily-mystery" component={DailyMystery} exact={true} />
+              <Route path="/discover" component={Discover} exact={true} />
+              <Route path="/badges" component={Badges} exact={true} />
+              
+              <Route path="/country/:id" component={CountryDetails} />
+              
+              <Route exact path="/" render={() => <Redirect to="/explore" />} />
+            </IonRouterOutlet>
+            
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="explore" href="/explore">
+                <IonIcon icon={compass} />
+                <IonLabel>Explore</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="map" href="/passport">
+                <IonIcon icon={map} />
+                <IonLabel>Map</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="games" href="/games">
+                <IonIcon icon={apps} />
+                <IonLabel>Games</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="profile" href="/profile">
+                <IonIcon icon={person} />
+                <IonLabel>Profile</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        )}
       </IonPage>
     </IonReactRouter>
-  </IonApp>
+  );
+};
+
+const App: React.FunctionComponent = () => (
+  <UserProvider>
+    <IonApp>
+      <AppContent />
+    </IonApp>
+  </UserProvider>
 );
 
 export default App;
